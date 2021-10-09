@@ -8,25 +8,24 @@ int main()
     cout << "Enter the size of char: ";
     cin >> n;
     char array[n + 1];
+       bool temp = 1;
 
     cout << endl
          << "Enter any char for check pallindrome char: ";
     cin >> array;
 
-    bool check = 1;
-
     for (int i = 0; i < n; i++)
     {
-        if (array[i] != array[n - 1 - i])
+        if (array[i] != array[n - i - 1])
         {
-            check = 0;
+            temp = 0;
             break;
         }
     }
 
-    if (check == true)
+    if (temp == true){
         cout << endl
-             << "Char is pallindrome";
+             << "Char is pallindrome";}
 
     else
         cout << endl
